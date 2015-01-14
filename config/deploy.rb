@@ -13,7 +13,7 @@ require 'mina/git'
 set :user, 'codetython'
 set :domain, 'codetython.com.br'
 set :deploy_to, '/var/www/codetython'
-set :repository, 'git@gitlab.com:pablobfonseca/codetython.git'
+set :repository, 'git@github.com:pablobfonseca/codetython.git'
 set :branch, 'master'
 
 # For system-wide RVM install.
