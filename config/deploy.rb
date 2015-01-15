@@ -12,6 +12,7 @@ require 'mina/git'
 
 set :user, 'codetython'
 set :domain, 'codetython.com.br'
+set :port, '4321'
 set :deploy_to, '/var/www/codetython'
 set :repository, 'git@github.com:pablobfonseca/codetython.git'
 set :branch, 'master'
