@@ -8,6 +8,8 @@ gem 'uglifier', '>= 1.3.0'
 group :developement, :test do
   gem 'spring'
   gem 'jazz_hands', git: "https://github.com/pablobfonseca/jazz_hands"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem "therubyracer"
