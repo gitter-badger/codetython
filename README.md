@@ -14,4 +14,4 @@
 *  [Iago Effting](https://github.com/iagoEffting)
 
 ## Licença
-MIT License.
+MIT - License.
