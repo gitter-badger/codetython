@@ -12,10 +12,10 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 ser :rails_env, 'production'
 set :user, 'codetython'
 set :domain, 'codetython.com.br'
-set :deploy_to, '/var/www/codetython'
+set :deploy_to, '/home/codetython/codetython'
 set :repository, 'git@github.com:codetython/codetython.git'
 set :branch, 'master'
-set :forward_agent, true
+set :port, '8888'
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
@@ -32,16 +32,10 @@ set :shared_paths, ['config/database.yml', 'log', 'config/secrets.yml']
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
 task :environment do
-  queue! %[mkdir -p "#{deploy_to}/shared/log"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
+  queue 'source ~/.bash_profile'
 
-  queue! %[mkdir -p "#{deploy_to}/shared/config"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
-
-  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
-
-  queue  %[echo "-----> Be sure to edit 'shared/config/secrets.yml'."]
+  # For those using RVM, use this to load an RVM version@gemset.
+  invoke :'rvm:use[ruby-2.1.5]'
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
@@ -65,7 +59,7 @@ task :deploy => :environment do
     # instance of your project.
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    invoke :'bundle:install --path vendor/bundle'
+    invoke :'bundle:install'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
 
