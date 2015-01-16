@@ -7,14 +7,14 @@ gem 'uglifier', '>= 1.3.0'
 
 group :developement, :test do
   gem 'spring'
-  gem 'jazz_hands', git: "https://github.com/pablobfonseca/jazz_hands"
+  gem 'jazz_hands', git: "https://github.com/pablobfonseca/jazz_hands.git"
   gem 'better_errors'
   gem 'binding_of_caller'
 end
 
 gem "therubyracer", platforms: :ruby
 gem "less-rails" 
-gem "twitter-bootstrap-rails", git: 'https://github.com/seyhunak/twitter-bootstrap-rails'
+gem "twitter-bootstrap-rails", git: 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'mina'
 gem 'devise'
