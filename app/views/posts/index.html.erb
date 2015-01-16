@@ -1,0 +1,16 @@
+<div id="posts">
+<% @posts.each do|post| %>
+  <div id="post">
+    <h3>
+      <%= post.title %>
+    </h3> 
+    <%= simple_format post.body %>
+    <small> 
+      <%= link_to 'Editar', edit_post_path(post) %>
+      <%= link_to 'Apagar', post, method: :delete, data: { confirm: 'Você tem certeza?' } %> 
+    </small> 
+  </div> 
+<% end %> 
+</div>  
+
+<%= link_to 'Novo Post', new_post_path %>
