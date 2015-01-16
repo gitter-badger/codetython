@@ -12,10 +12,11 @@ group :developement, :test do
   gem 'binding_of_caller'
 end
 
-gem "therubyracer"
+gem "therubyracer", platforms: :ruby
 gem "less-rails" 
 gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem 'mina'
 gem 'devise'
 gem 'simple_form'
 gem 'jquery-rails'
