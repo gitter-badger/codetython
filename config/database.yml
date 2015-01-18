@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: codetython_development
+  username: postgres
+  password: postgres
+
+test:
+  <<: *default
+  database: codetython_test
+
+production:
+  <<: *default
+  database: codetython_production
+  username: postgres
+  password: <%= ENV['PASSWORD'] %>
