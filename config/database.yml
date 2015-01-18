@@ -1,20 +1,28 @@
-default: &default
+development:
   adapter: postgresql
   encoding: unicode
-  pool: 5
-
-development:
-  <<: *default
   database: codetython_development
-  username: postgres
-  password: postgres
+  pool: 5
+  username: <%= ENV['PG_USERNAME'] || 'postgres' %>
+  password: <%= ENV['PG_PASSWORD'] || 'postgres' %>
+  host: localhost
+  port: 5432
 
 test:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: codetython_test
+  pool: 5
+  username: <%= ENV['PG_USERNAME'] || 'postgres' %>
+  password: <%= ENV['PG_PASSWORD'] || 'postgres' %>
+  host: localhost
+  port: 5432
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: codetython_production
-  username: postgres
-  password: <%= ENV['PASSWORD'] %>
+  pool: 5
+  username: <%= ENV['PG_USERNAME'] || 'postgres' %>
+  password: <%= ENV['PG_PASSWORD'] || 'postgres' %>
+  host: localhost
