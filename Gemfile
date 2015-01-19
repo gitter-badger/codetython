@@ -14,6 +14,7 @@ end
 group :test do
   gem 'spring'
   gem 'sqlite3', '~> 1.3.10'
+  gem "codeclimate-test-reporter", require: nil
 end
 
 gem "therubyracer", platforms: :ruby
