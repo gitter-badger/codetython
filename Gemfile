@@ -13,6 +13,7 @@ end
 
 group :test do
   gem 'spring'
+  gem 'sqlite3', '~> 1.3.10'
 end
 
 gem "therubyracer", platforms: :ruby
