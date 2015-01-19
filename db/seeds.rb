@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+user = User.new
+user.email = 'admin@codetython.com.br'
+user.password = '1234567'
+user.password_confirmation = '1234567'
+user.save!
