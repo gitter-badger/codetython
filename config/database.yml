@@ -9,14 +9,10 @@ development:
   port: 5432
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: codetython_test
+  adapter: sqlite3 
+  database: db/test.sqlite3
   pool: 5
-  username: <%= ENV['PG_USERNAME'] || 'postgres' %>
-  password: <%= ENV['PG_PASSWORD'] || 'postgres' %>
-  host: localhost
-  port: 5432
+  timeout: 5000
 
 production:
   adapter: postgresql
