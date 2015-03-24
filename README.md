@@ -1,4 +1,6 @@
 # CodeTython [![Build Status](https://travis-ci.org/codetython/codetython.svg)](https://travis-ci.org/codetython/codetytyhon)
+
+[![Join the chat at https://gitter.im/codetython/codetython](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/codetython/codetython?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 >Que a Força esteja com todos nós, e que a paz desse templo seja nossa, um lugar aberto para pensar e falar, uma esfera de mútuo respeito, e refúgio de propósitos nobres compartilhados. Que nós tomemos esses assentos juntos, com ninguém acima dos outros. Que nós trabalhemos juntos, livres das restrições do ego e do ciúme, nesta reunião e nas outras que vierem.
 
 ## Participe
